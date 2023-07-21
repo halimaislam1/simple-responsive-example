@@ -1,0 +1,55 @@
+img{
+    /* img er moddhe joto 
+    percent jayga ase puru
+    tay width niyese */
+    width: 100%;
+    height: 100%;
+}
+.row{
+    height: 400px;
+    display: flex;
+    /* flex betorer jinishe kj
+     kore ty pic er majhe gap 
+     hoise side na */
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.row>div{
+    /* row er betore
+    jotogula immediate 
+    child div ase tader
+    flex 1,1 mane shby
+    soman soman jayga
+    nibe */
+    flex: 1;
+}
+.vertical-collage img{
+    /* 2 ta flower er majhe gap dewar 
+    jonno: prottek imag 100% pabe na
+    tar thk 5px bad dele tar ordek pabe*/
+    height: calc((100% - 5px)/2);
+}
+.square-collage{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+}
+
+/*responsive media quary */
+/* small divises */
+@media screen and (max-width:576px){
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .square-collage{
+        grid-template-columns: 1fr;
+    }
+}
+/* medium divices */
+    @media screen and (min-width:576px)  and (max-width:992px) {
+        .row{
+            flex-direction: column;
+            height: auto;
+        }
+    }
